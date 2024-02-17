@@ -7,27 +7,30 @@
              xmlns:controls="clr-namespace:Youtube.Controls;assembly=Youtube"
              Title=" "
              x:Class="Youtube.Views.MenuPage">
+    
     <ContentPage.Resources>
+    
         <ResourceDictionary>
-            <Style x:Key="ProfileNameLabelStyle"
+        
+            <!--Style x:Key="ProfileNameLabelStyle"
                    TargetType="{x:Type Label}"
                    >
                 <Setter Property="TextColor"
                         Value="{StaticResource WhiteColor}" />
                 <Setter Property="FontSize"
                         Value="{StaticResource BigSize}" />
-            </Style>
+            </Style-->
 
-            <Style x:Key="UwpProfileNameLabelStyle"
+            <!--Style x:Key="UwpProfileNameLabelStyle"
                    TargetType="{x:Type Label}"
                   >
                 <Setter Property="TextColor"
                         Value="{StaticResource BlueColor}" />
                 <Setter Property="FontSize"
                         Value="{StaticResource MediumSize}" />
-            </Style>
+            </Style-->
 
-            <Style x:Key="MenuItemLabelStyle"
+            <!--Style x:Key="MenuItemLabelStyle"
                    TargetType="{x:Type Label}"
                    >
                 <Setter Property="TextColor"
@@ -36,9 +39,9 @@
                         Value="{StaticResource MediumSize}" />
                 <Setter Property="Opacity"
                         Value="0.87" />
-            </Style>
+            </Style-->
 
-            <Style x:Key="UwpMenuItemLabelStyle"
+            <!--Style x:Key="UwpMenuItemLabelStyle"
                    TargetType="{x:Type Label}"
                    >
                 <Setter Property="TextColor"
@@ -47,10 +50,13 @@
                         Value="{StaticResource MediumSize}" />
                 <Setter Property="Opacity"
                         Value="0.87" />
-            </Style>
+            </Style-->
 
         </ResourceDictionary>
+    
     </ContentPage.Resources>
+    
+    
     <ContentPage.Content>
         <Grid>
             <Grid.BackgroundColor>
@@ -150,8 +156,7 @@
                        Margin="0,15"
                        VerticalOptions="CenterAndExpand">
 
-                        <Label Text="{Binding}"
-                              Style="{StaticResource BlackColor}"></Label>
+                        <Label Text="{Binding}"></Label>
                     </StackLayout>
 
                 </Grid>
@@ -210,14 +215,14 @@
                                                 Windows="23,0,0,0"
                                                 WinPhone="5,0,0,0"></helper:OnCustomPlatform>
                                         </Label.Margin>
-                                        <Label.Style>
+                                        <!--Label.Style>
                                             <helper:OnCustomPlatform
                                                 x:TypeArguments="Style"
                                                 Android="{StaticResource MenuItemLabelStyle}"
                                                 iOS="{StaticResource MenuItemLabelStyle}"
                                                 WinPhone="{StaticResource UwpMenuItemLabelStyle}"
                                                 Windows="{StaticResource UwpMenuItemLabelStyle}"></helper:OnCustomPlatform>
-                                        </Label.Style>
+                                        </Label.Style-->
                                     </Label>
                                 </StackLayout>
                             </ViewCell>

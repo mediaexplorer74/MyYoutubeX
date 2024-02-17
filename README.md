@@ -1,4 +1,5 @@
-# MyYoutubeX
+# MyYoutubeX (*master* branch)
+![Bug](Images/logo.png)
 
 My fast and little RnD of MyYoutubeXamarinForm project. 
 
@@ -13,19 +14,19 @@ MyYoutube is a youtube application. Which are using Youtube API from google. It 
 - Portable -> "Sharable"
 - Modern Xamarin Forms 5.0
 - Modern Prism
+- Min. Win. os build = 19041 (no W10M compatibility at now)
  
 
 ## Result
-- Draft / Damaged
-- Idk how to debug this "black screen bug" :( Experienced developer help needed
+- Draft / Damaged (very strange work of any view...)
+- Idk how to debug this "mvvm construction" :( Experienced developer help needed
 
-## Credits / License
+## Credits
 - https://github.com/Englbach Le Thien Hoang aka Englbach, MyYoutubeXamarinForm's developer
 - https://github.com/Englbach/MyYoutubeXamarinForm The original XF-Portable-based project
-- MIT
 
 ## ..
-As is. No support. RnD only. DIY :)
+As is. No support. RnD only. DIY.
 
 ## .
-[m][e] 2023
+[m][e] 2024
