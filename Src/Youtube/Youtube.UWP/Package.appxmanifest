@@ -4,19 +4,18 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap mp uap3">
+  IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ME.MyYoutubeV1"
-    Publisher="CN=Admin"
+    Name="2d10961f-3061-4216-ac6c-ffbc0df9102e"
+    Publisher="CN=lethi"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="2d10961f-3061-4216-ac6c-ffbc0df9102e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Youtube.UWP</DisplayName>
-    <PublisherDisplayName>80B24470-A8F5-4121-ADCC-851DBEAEE083</PublisherDisplayName>
+    <PublisherDisplayName>lethi</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -38,29 +37,13 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Youtube.UWP"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
-          <uap:ShowNameOnTiles>
-            <uap:ShowOn Tile="square150x150Logo" />
-            <uap:ShowOn Tile="wide310x150Logo" />
-            <uap:ShowOn Tile="square310x310Logo" />
-          </uap:ShowNameOnTiles>
-        </uap:DefaultTile>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
-        <uap:InitialRotationPreference>
-          <uap:Rotation Preference="landscape"/>
-          <uap:Rotation Preference="portrait"/>
-          <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
 
   <Capabilities>
     <Capability Name="internetClient" />
-    <uap:Capability Name="videosLibrary"/>
-    <uap:Capability Name="picturesLibrary"/>
-    <uap:Capability Name="musicLibrary"/>
-    <uap3:Capability Name="backgroundMediaPlayback"/>
-    <uap:Capability Name="removableStorage"/>
-    <uap3:Capability Name="remoteSystem"/>
   </Capabilities>
 </Package>

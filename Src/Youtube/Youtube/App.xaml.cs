@@ -30,18 +30,15 @@ namespace Youtube
 
             if (Device.OS != TargetPlatform.Windows)
             {
-                 await InitNavigation();
+                await InitNavigation();
             }
         }
 
         private Task InitNavigation()
         {
-            INavigationService navigationService = 
-                ViewModelLocator.Instance.Resolve<INavigationService>();
-
+            var navigationService = ViewModelLocator.Instance.Resolve<INavigationService>();
             return navigationService.InitializeAsync();
         }
-
         private void AdaptColorsToHexString()
         {
             for (var i = 0; i < this.Resources.Count; i++)
@@ -52,11 +49,9 @@ namespace Youtube
                 if (resource is Color)
                 {
                     var color = (System.Drawing.Color)resource;
-                    this.Resources.Add(key + "HexString", color.ToHexString());
+                    this.Resources.Add(key + "HexString",  color.ToHexString());
                 }
             }
         }
     }
 }
-
-

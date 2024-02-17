@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Unity;
 using Prism.Services;
-
-using Unity.Lifetime; //using Microsoft.Practices.ServiceLocation;
-using Unity; //using Microsoft.Practices.Unity;
-
 using Youtube.DataServices;
 using Youtube.DataServices.Base;
 using Youtube.DataServices.Interfaces;
 using Youtube.Services;
 using Youtube.Services.Interfaces;
-using Splat;
-using System.Diagnostics;
 
 namespace Youtube.ViewModels.Base
 {
@@ -39,22 +35,20 @@ namespace Youtube.ViewModels.Base
             _unityContainer.RegisterType<IDialogService, DialogService>();
 
             //_unityContainer.RegisterType<IServiceLocator,Location>()
-
-            // Reg. Nav. Service
+            //servicers
             RegisterSingleton<INavigationService, NavigationService>();
-            
-            //Data Services
+            //data services
             _unityContainer.RegisterType<IAuthenticationService, AuthenticationService>();
             _unityContainer.RegisterType<IProfileService, ProfileService>();
             _unityContainer.RegisterType<ITrendingService, TrendingService>();
             _unityContainer.RegisterType<IVideoService, VideoService>();
-            
-            //View Models
+            //viewmodels
             _unityContainer.RegisterType<LoginViewModel>();
             _unityContainer.RegisterType<MainViewModel>();
             _unityContainer.RegisterType<MenuViewModel>();
             _unityContainer.RegisterType<HomeViewModel>();
             _unityContainer.RegisterType<VideoViewModel>();
+
         }
 
         public T Resolve<T>()
@@ -70,7 +64,7 @@ namespace Youtube.ViewModels.Base
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("[ex] unityContainer.Resolve error: " + ex.Message);
+
                 throw;
             }
         }

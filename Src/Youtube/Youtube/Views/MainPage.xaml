@@ -5,7 +5,8 @@
              x:Class="Youtube.Views.MainPage">
     <MasterDetailPage.MasterBehavior>
         <OnPlatform
-            x:TypeArguments="MasterBehavior" WinPhone="Popover"></OnPlatform>
+            x:TypeArguments="MasterBehavior"
+            WinPhone="Popover"></OnPlatform>
     </MasterDetailPage.MasterBehavior>
     <MasterDetailPage.Master>
         <views:MenuPage BindingContext="{Binding MenuViewModel}"></views:MenuPage>

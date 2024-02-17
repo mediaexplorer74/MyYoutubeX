@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Youtube.Helpers
 {
-    //OnCustomPlatform<T> class
     public sealed class OnCustomPlatform<T>
     {
         public OnCustomPlatform()
@@ -30,7 +29,6 @@ namespace Youtube.Helpers
 
         public static implicit operator T(OnCustomPlatform<T> onPlatform)
         {
-            
             switch (Xamarin.Forms.Device.OS)
             {
                 case Xamarin.Forms.TargetPlatform.Android:
@@ -46,11 +44,7 @@ namespace Youtube.Helpers
                         return onPlatform.WinPhone;
                 default:
                     return onPlatform.Other;
-            }            
-        
-            //return onPlatform.Windows;
-        }//
-
-    }//OnCustomPlatform<T> class end
-
-}//Youtube.Helpers namespace end
+            }
+        }
+    }
+}

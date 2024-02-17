@@ -28,8 +28,8 @@ namespace Youtube.Helpers
         private const string ProfileIdKey = "profile_id_key";
         private static readonly int ProfileIdDefault = 0;
 
-        private const string AccessTokenKey = "AIzaSyBo0ZFHKVnSs2RGxm8ckRVuBtSh1PQvL94";//"access_token_key";
-        private static readonly string AccessTokenDefault = string.Empty;
+        private const string AccessTokenKey = "access_token_key";
+        private static readonly string AcessTokenDefault = string.Empty;
 
         private const string UwpWindowSizeKey = "uwp_window_size";
         private static readonly string UwpWindowSizeDefault = string.Empty;
@@ -48,7 +48,7 @@ namespace Youtube.Helpers
 
         public static string AccessToken
         {
-            get { return AppSettings.GetValueOrDefault(AccessTokenKey, AccessTokenDefault); }
+            get { return AppSettings.GetValueOrDefault(AccessTokenKey, AcessTokenDefault); }
             set { AppSettings.AddOrUpdateValue(AccessTokenKey, value); }
         }
 
@@ -72,6 +72,8 @@ namespace Youtube.Helpers
         {
             AppSettings.Remove(AccessTokenKey);
         }
+
+
 
         #endregion
     }

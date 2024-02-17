@@ -3,21 +3,11 @@
 My fast and little RnD of MyYoutubeXamarinForm project. 
 
 
-## Screenshot(s)
-![Bug](Images/shot01.png)
-
 ## About the original
-MyYoutube is a youtube application. Which are using Youtube API from google. It was developing base on Xamarin form.
+MyYoutube is a unofficial Youtube application. Which are using Youtube API from google. It was developing base on Xamarin form "technology".
 
-## My 2 cents
-- Portable -> "Sharable"
-- Modern Xamarin Forms 5.0
-- Modern Prism
- 
-
-## Result
-- Draft / Damaged
-- Idk how to debug this "black screen bug" :( Experienced developer help needed
+## Status
+- Research phase
 
 ## Credits / License
 - https://github.com/Englbach Le Thien Hoang aka Englbach, MyYoutubeXamarinForm's developer
@@ -25,7 +15,7 @@ MyYoutube is a youtube application. Which are using Youtube API from google. It 
 - MIT
 
 ## ..
-As is. No support. RnD only. DIY :)
+As is. No support. RnD only. DIY.
 
 ## .
-[m][e] 2023
+[m][e] 2024

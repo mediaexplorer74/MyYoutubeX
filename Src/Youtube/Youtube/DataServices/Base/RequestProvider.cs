@@ -45,10 +45,8 @@ namespace Youtube.DataServices.Base
             await HandleResponse(response);
 
             string serialied = await response.Content.ReadAsStringAsync();
-
             TResult result =
-                await Task.Run(() => 
-                JsonConvert.DeserializeObject<TResult>('['+serialied+']', _serializerSettings));
+                await Task.Run(() => JsonConvert.DeserializeObject<TResult>('['+serialied+']', _serializerSettings));
 
             return result;
         }
@@ -79,19 +77,14 @@ namespace Youtube.DataServices.Base
         {
             HttpClient httpClient = CreateHttpClient();
 
-            string serialized = await Task.Run(() 
-                => JsonConvert.SerializeObject(data, _serializerSettings));
-
+            string serialized = await Task.Run(() => JsonConvert.SerializeObject(data, _serializerSettings));
             HttpResponseMessage response =
-                await httpClient.PostAsync(uri, 
-                new StringContent(serialized, Encoding.UTF8, "application/json"));
+                await httpClient.PostAsync(uri, new StringContent(serialized, Encoding.UTF8, "application/json"));
 
             await HandleResponse(response);
 
             string responseData = await response.Content.ReadAsStringAsync();
-
-            return await Task.Run(() => 
-            JsonConvert.DeserializeObject<TResult>(responseData, _serializerSettings));
+            return await Task.Run(() => JsonConvert.DeserializeObject<TResult>(responseData, _serializerSettings));
         }
 
         /// <summary>
@@ -118,17 +111,13 @@ namespace Youtube.DataServices.Base
         {
             HttpClient httpClient = CreateHttpClient();
 
-            string serialized = await Task.Run(() 
-                => JsonConvert.SerializeObject(data, _serializerSettings));
-            
+            string serialized = await Task.Run(() => JsonConvert.SerializeObject(data, _serializerSettings));
             HttpResponseMessage response =
-                await httpClient.PutAsync(uri, 
-                new StringContent(serialized, Encoding.UTF8, "application/json"));
+                await httpClient.PutAsync(uri, new StringContent(serialized, Encoding.UTF8, "application/json"));
             await HandleResponse(response);
 
             string responseData = await response.Content.ReadAsStringAsync();
-            return await Task.Run(() 
-                => JsonConvert.DeserializeObject<TResult>(responseData, _serializerSettings));
+            return await Task.Run(() => JsonConvert.DeserializeObject<TResult>(responseData, _serializerSettings));
         }
 
         /// <summary>
@@ -160,11 +149,11 @@ namespace Youtube.DataServices.Base
         {
             var httpClient = new HttpClient();
 
-            httpClient.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             return httpClient;
         }
+
 
     }
 }

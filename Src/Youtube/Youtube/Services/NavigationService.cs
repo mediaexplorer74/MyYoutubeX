@@ -38,12 +38,14 @@ namespace Youtube.Services
         {
             _mappings.Add(typeof(LoginViewModel),typeof(LoginPage));
 
-            //if (Device.OS == TargetPlatform.Windows)
-            //{
-            //}
-            //else
-            //{                
-            //}
+            if (Device.OS == TargetPlatform.Windows)
+            {
+
+            }
+            else
+            {
+                
+            }
 
             _mappings.Add(typeof(MainViewModel),typeof(MainPage));
             _mappings.Add(typeof(HomeViewModel), typeof(HomePage));
@@ -106,8 +108,8 @@ namespace Youtube.Services
 
             if (mainPage != null)
             {
-               mainPage.Detail.Navigation.RemovePage(
-                 mainPage.Detail.Navigation.NavigationStack[mainPage.Detail.Navigation.NavigationStack.Count - 2]);
+                mainPage.Detail.Navigation.RemovePage(
+                    mainPage.Detail.Navigation.NavigationStack[mainPage.Detail.Navigation.NavigationStack.Count - 2]);
             }
 
             return Task.FromResult(true);

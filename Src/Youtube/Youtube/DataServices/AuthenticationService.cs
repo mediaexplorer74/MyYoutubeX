@@ -14,13 +14,7 @@ namespace Youtube.DataServices
     {
         private readonly IRequestProvider _requestProvider;
 
-        public bool isAuthenticated
-        {
-            get
-            {
-                return !string.IsNullOrEmpty(Settings.AccessToken);
-            }
-        }
+        public bool isAuthenticated => !string.IsNullOrEmpty(Settings.AccessToken);
 
         public AuthenticationService(IRequestProvider requestProvider)
         {

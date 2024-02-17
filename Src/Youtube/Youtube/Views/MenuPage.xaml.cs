@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Youtube.Views
 {
-    //[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
         public MenuPage()
